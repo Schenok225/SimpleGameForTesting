@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class CameraFollowing : MonoBehaviour
 {
-    public Transform target;
-    public Vector3 offset = new Vector3(0, 1, -6);
-    public float mouseSensitivity = 100f;
-    public float smoothSpeed = 0.125f;
-    public float minYAngle = -20f;
-    public float maxYAngle = 60f;
+    [SerializeField] private Transform target;
+    [SerializeField] private Vector3 offset = new Vector3(0, 1, -6);
+    [SerializeField] private float mouseSensitivity = 100f;
+    [SerializeField] private float smoothSpeed = 0.125f;
+    [SerializeField] private float minYAngle = -20f;
+    [SerializeField] private float maxYAngle = 60f;
     private float yaw = 0f;
-    private float pitch = -20f;
+    private float pitch = 20f;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
